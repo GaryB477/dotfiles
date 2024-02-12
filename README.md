@@ -22,3 +22,10 @@ make
 cd ~/.dotfiles
 make delete
 ```
+
+## Nice to know
+There is currently a bug, causing the stow to throw harmless errors like these:
+```
+BUG in find_stowed_path? Absolute/relative mismatch between Stow dir .dotfiles and path /home/user/.local/some/fancy/path at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+```
+See here "https://github.com/aspiers/stow/issues/65".
