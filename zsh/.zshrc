@@ -44,6 +44,9 @@ xset r rate 300 50
 
 ENABLE_CORRECTION="true"
 
+# Enable new docker buildkit
+export DOCKER_BUILDKIT=1
+
 # Aliases
 #alias "sudo"="sudo "
 #fix ssh issues with kitty
