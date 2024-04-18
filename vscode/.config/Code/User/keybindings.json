@@ -1,4 +1,4 @@
-// Place your key bindings in this file to override the defaults
+// Note: Vim keybinds are stored in the setting file
 [
     {
         "key": "ctrl+shift+7",
@@ -19,5 +19,9 @@
     {   "key": "escape", 
         "command": "hideSuggestWidget",
         "when": "suggestWidgetVisible"
-    } 
+    },
+    {
+        "key": "shift shift",
+        "command": "workbench.action.quickOpen"
+    }
 ]
