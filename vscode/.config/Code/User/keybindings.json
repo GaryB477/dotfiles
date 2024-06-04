@@ -23,5 +23,13 @@
     {
         "key": "shift shift",
         "command": "workbench.action.quickOpen"
+    },
+    {
+        "key": "f2",
+        "command": "editor.action.revealDefinition"
+    },
+    {
+        "key": "ctrl+shift+alt+l",
+        "command": "editor.action.formatDocument"
     }
 ]
