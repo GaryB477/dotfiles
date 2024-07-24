@@ -3,7 +3,7 @@ Description=Automatically does git push and pull on a number of repos
 
 [Service]
 Type=simple
-ExecStart=~/autosync/sync.sh
+ExecStart=/home/marc/autosync/sync.sh
 Nice=19
 
 [Install]
