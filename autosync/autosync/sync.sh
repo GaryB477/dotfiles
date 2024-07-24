@@ -1,4 +1,4 @@
 #!/bin/sh
 
-cd ~/doc/notebook
+cd ~/.dotfiles
 ~/autosync/git-sync
