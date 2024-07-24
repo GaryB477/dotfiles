@@ -95,16 +95,16 @@
             "commands": ["workbench.action.navigateForward"]
         },
         {
-            "before": ["<Leader>", "h"],
-            "commands": ["workbench.action.navigateLeft"]
-        },
-        {
             "before": ["<Leader>", "l"],
             "commands": ["workbench.action.navigateEditorGroups"]
         },
         {
             "before": ["<Leader>", "f"],
             "commands": ["editor.foldRecursively"]
+        },
+        {
+            "before": ["<Leader>", "f", "f"],
+            "commands": ["editor.foldAll"]
         },
         {
             "before": ["<Leader>", "o"],
@@ -117,6 +117,10 @@
         {
             "before": ["<C-d>"],
             "after": ["1", "0", "j"]
+        },
+        {
+            "before": ["<Leader>", "w"],
+            "commands": ["editor.action.marker.next"],
         },
     ],
     "vim.visualModeKeyBindings": [

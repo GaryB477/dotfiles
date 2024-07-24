@@ -1,0 +1,171 @@
+let
+ unstable = import <nixpkgs-unstable> { config = { allowUnfree = true; }; };
+ nixgl = import <nixgl> { config = { allowUnfree = true; }; };
+in
+
+{
+ allowUnfree = true;
+permittedInsecurePackages = [
+  "nodejs-14.21.3"
+  "openssl-1.1.1u"
+  "electron-13.6.9"
+  "qtwebkit-5.212.0-alpha4"
+];
+  packageOverrides = pkgs: with pkgs; {
+    myPackages = pkgs.buildEnv {
+      name = "my-packages";
+      paths = [
+# gnome.nix start
+wofi # rofi, but wofi cus wayland :shrug:
+
+# Frontend for X11 
+gnome3.gnome-tweaks
+jumpapp
+#xorg.xhost
+xdotool
+wmctrl
+xbindkeys
+autorandr
+arandr
+#xorg.xhost
+polkit
+
+# Wayland
+wofi # rofi, but wofi cus wayland :shrug:k
+grim # taking screenshots
+slurp # selecting a region to screenshot
+mako # the notification daemon, the same as dunst
+yad # a fork of zenity, for creating dialogs
+# gnome.nix end
+
+# Storage
+cifs-utils
+
+# Frontend for wayland 
+kanshi #autorandr for wayland
+wl-clipboard #clipboard for wayland
+wev # wayland event viewer
+wdisplays # wayland version of arandr
+wlr-randr # wayland xrandr
+wlrctl # Command line utility for miscellaneous wlroots Wayland extensions
+
+# audio
+alsa-utils # provides amixer/alsamixer/...
+playerctl # Command-line utility and library for controlling media players that implement MPRIS
+mpd # for playing system sounds
+mpc-cli # command-line mpd client
+ncmpcpp # a mpd client with a UI
+networkmanagerapplet # provide GUI app: nm-connection-editor
+
+# Development tools
+unstable.vscode
+vim
+git
+gitg
+unstable.gitkraken
+gimp
+docker
+docker-compose
+pandoc
+rpi-imager
+gparted
+meld
+#glxinfo
+kooha
+#jetbrains-toolbox
+shell_gpt
+#unstable.jetbrains.clion
+dpkg
+
+# Development environment 
+acpid # A daemon for delivering ACPI events to userspace programs
+nodejs
+patchelf
+#steam-run
+stdenv
+xvfb-run
+fuse
+pmutils # A small collection of scripts that handle suspend and resume on behalf of HAL
+
+# OpenGl for Nix packages on non-nixos
+# Out of the box, these apps cant use the openGL driver. To fix this, we can use this
+# libray: https://github.com/nix-community/nixGL
+# TL;DR installation: 
+# - nix-channel --add https://github.com/guibou/nixGL/archive/main.tar.gz nixgl && nix-channel --update
+# - nix-env -iA nixgl.auto.nixGLDefault 
+# Then, launch the programm with: `nixGL <programm>`
+#
+# ToDo: 
+#  - Make this work to build / install with nix packages config
+#  - Somehow add this to the default path so that we dont need to type every time ;)
+#
+# Maybe make an overlay like here? https://github.com/markuskowa/NixOS-QChem-test1/blob/b6c23828758fdda3d7f857918650e00abc4c95ec/pkgs/apps/nixgl/default.nix
+#nixgl.nixGLDefault
+
+## CPP
+#cmake
+gdb
+#gcc
+#gnumake
+doxygen
+
+## Qt 
+#qtcreator
+#qt5.full
+#qt6.full
+
+# Power management testing
+powertop
+stress
+geekbench_5
+
+## Androie tools
+android-tools
+android-studio
+bundletool # convert apk bundles to apks
+scrcpy
+
+# Terminal 
+kitty
+alacritty
+zsh
+neofetch
+trash-cli
+killall
+neovim
+s-tui
+htop
+tree
+zip
+unzip
+xclip
+jq # A lightweight and flexible command-line JSON processor
+socat
+
+# Generla stuff
+google-chrome
+firefox
+unstable._1password-gui
+unstable.obsidian
+unstable.discord
+unstable.spotify
+slack
+libreoffice
+drawio
+#gnome.nautilus
+#cinnamon.nemo-with-extensions
+#evince # default gnome pdf viewer
+udisks # automount usb sticks
+
+# Naviswiss 
+## Naviplan workflow dependencies
+paraview
+flatbuffers
+flatcc
+	
+      ];
+      pathsToLink = [ "/share" "/bin" ];
+    };
+  };
+}
+
