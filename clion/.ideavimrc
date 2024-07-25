@@ -45,3 +45,4 @@ map <leader>fh <Action>(Vcs.ShowTabbedFileHistory)
 map <S-Space> <Action>(GotoNextError)
 
 map <leader>b <Action>(ToggleLineBreakpoint)
+set ideajoin
