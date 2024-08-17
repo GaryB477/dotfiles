@@ -18,6 +18,7 @@ in
         unstable.discord
         unstable.spotify
         unstable.slack
+        unstable.orca-slicer
       ];
     };
   };
