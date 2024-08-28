@@ -10,6 +10,7 @@ in
       name = "my-packages";
       paths = [
         kooha
+        valgrind
         unstable.vscode
         unstable.gitkraken
         unstable.google-chrome
