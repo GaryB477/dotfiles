@@ -134,4 +134,5 @@
         "Naviswiss"
     ],
     "workbench.colorTheme": "Material theme oceanic custom",
+    "git.confirmSync": false,
 }
