@@ -135,4 +135,5 @@
     ],
     "workbench.colorTheme": "Material theme oceanic custom",
     "git.confirmSync": false,
+    "git.suggestSmartCommit": false,
 }
