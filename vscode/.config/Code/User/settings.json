@@ -137,4 +137,7 @@
     "git.confirmSync": false,
     "git.suggestSmartCommit": false,
     "explorer.confirmPasteNative": false,
+    "files.associations": {
+        "*.FCMacro": "python"
+    },
 }
