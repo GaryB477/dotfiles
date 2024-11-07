@@ -64,3 +64,5 @@ alias "vim"="nvim"
 alias meditool="(cd /home/marc/Documents/MediTool\ V1.2.0; ./MediTool.AppImage)"
 alias "cg"="/home/marc/private/git/dotfiles_private/nixos/connect_wifi_guest.sh"
 alias "ci"="/home/marc/private/git/dotfiles_private/nixos/connect_wifi_inside.sh"
+
+export PATH="/home/marc/.cargo/bin:$PATH"
