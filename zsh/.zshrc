@@ -34,7 +34,6 @@ source $ZSH/oh-my-zsh.sh
 # Various keybinds
 bindkey '^ ' autosuggest-accept
 setxkbmap -option caps:escape
-setxkbmap ch 
 
 # Setup of xserver for qt in docker
 xhost + local: >> /dev/null
