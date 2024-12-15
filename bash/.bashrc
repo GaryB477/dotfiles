@@ -144,3 +144,5 @@ export KITTY_DISABLE_WAYLAND=1
 xhost +
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+export STM32_PRG_PATH=/home/marc/STMicroelectronics/STM32Cube/STM32CubeProgrammer/bin
