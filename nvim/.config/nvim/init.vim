@@ -17,11 +17,6 @@ set mouse=a                 " enable mouse click
 set clipboard=unnamedplus   " using system clipboard
 filetype plugin on
 set ttyfast                 " Speed up scrolling in Vim
-" set cc=80                  " set an 80 column border for good coding style
-" set spell                 " enable spell check (may need to download language package)
-" set noswapfile            " disable creating swap file
-" set backupdir=~/.cache/vim " Directory to store backup files.
-" Enable folding
 set foldmethod=indent
 set foldlevel=99
 
@@ -70,7 +65,6 @@ call plug#end()
 " # 
 " Note: Needs to be set after the plugin is installed
 set background=dark
-"colorscheme oceanic_material
 colorscheme material
 set termguicolors " needed for the theme and color to be rendered properly
 
