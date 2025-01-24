@@ -30,6 +30,11 @@ source $ZSH/oh-my-zsh.sh
 
 # fzf keybinds
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# Used on NixOS
+if [ -n "${commands[fzf-share]}" ]; then
+  source "$(fzf-share)/key-bindings.zsh"
+  source "$(fzf-share)/completion.zsh"
+fi
 
 # Various keybinds
 bindkey '^ ' autosuggest-accept

@@ -23,13 +23,20 @@
 (require 'clipetty)
 (global-clipetty-mode)
 
+
+;; Add file explorer
+(unless (package-installed-p 'ranger)
+  (package-install 'ranger))
+(require 'ranger)
+(setq ranger-show-hidden t)
+
 ;; Ensure that 'save-place' is enabled to remember the cursor position
 (save-place-mode 1)
 
-;; LSP
-(unless (package-installed-p 'lsp-mode)
-  (package-install 'lsp-mode))
-(require 'lsp-mode)
+(use-package nix-mode
+  :ensure t
+  :mode (("\\.nix\\'" . nix-mode)))
+
 
 
 
@@ -42,9 +49,23 @@
 (line-number-mode 1) ;; Enable line and column numbering in modeline
 (column-number-mode 1)
 
+;; Follow symlinks
+(setq vc-follow-symlinks t)
+
+;; Syntax highlighting
+(setq font-lock-maximum-decoration t)
+
 (custom-set-variables
- '(package-selected-packages '(evil)))
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages '(format-all ranger evil)))
 (custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  )
 
 ;; Theme
