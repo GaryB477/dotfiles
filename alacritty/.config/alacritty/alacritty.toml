@@ -1,0 +1,13 @@
+#term = "xterm-256color"
+
+[font]
+size = 13.0
+
+[window]
+opacity = 0.9
+dynamic_title = false
+title = "alacritty"
+decorations = "None"
+
+[general]
+live_config_reload = true
