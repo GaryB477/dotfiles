@@ -65,5 +65,7 @@ alias "cp"="rsync -ah --progress"
 alias "apt"="nala"
 alias "apt-get"="nala"
 alias "vim"="nvim"
+alias "gs"="git status"
+
 
 export PATH="/home/marc/.cargo/bin:$PATH"
