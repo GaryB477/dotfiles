@@ -19,7 +19,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 if [ -n "${commands[fzf-share]}" ]; then
         source "$(fzf-share)/key-bindings.zsh"
         source "$(fzf-share)/completion.zsh"
-        alias  "nr"="sudo nixos-rebuild switch --flake /home/marc/git/private/linux/nixos#work_dg --impure"
+        alias  "nr"="sudo nixos-rebuild switch --flake /home/marc/git/private/linux/nixos#work_dg"
         alias  "ns"="nix-search"
 else
         # Plugin installation:
