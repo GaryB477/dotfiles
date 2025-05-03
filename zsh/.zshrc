@@ -6,6 +6,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 export ZSH=$HOME/.oh-my-zsh
+export PATH="$PATH:/home/marc/.dotnet/tools"
+
 ZSH_THEME="powerlevel10k/powerlevel10k"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -17,7 +19,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 if [ -n "${commands[fzf-share]}" ]; then
         source "$(fzf-share)/key-bindings.zsh"
         source "$(fzf-share)/completion.zsh"
-        alias  "nr"="sudo nixos-rebuild switch --flake /home/marc/git/private/linux/nixos#work_dg --impure"
+        alias  "nr"="sudo nixos-rebuild switch --flake /home/marc/git/private/linux/nixos#work_dg"
         alias  "ns"="nix-search"
 else
         # Plugin installation:
@@ -56,3 +58,4 @@ alias "cp"="rsync -ah --progress"
 alias "apt"="nala"
 alias "apt-get"="nala"
 alias "vim"="nvim"
+alias "gs"="git status"
