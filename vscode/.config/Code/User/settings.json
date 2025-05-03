@@ -3,7 +3,6 @@
     "workbench.startupEditor": "none",
     "git.autofetch": true,
     "code-runner.executorMap": {
-
         "javascript": "node",
         "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
         "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
@@ -67,77 +66,173 @@
     "keyboard.dispatch": "keyCode",
     "extensions.ignoreRecommendations": true,
     "explorer.confirmDelete": false,
+    "editor.smoothScrolling": true,
     "editor.cursorSurroundingLines": 15,
-    "files.autoSave": "afterDelay",
     "vim.easymotion": true,
     "vim.incsearch": true,
     "vim.useSystemClipboard": true,
     "vim.useCtrlKeys": false,
     "vim.foldfix": true,
     "vim.leader": "<Space>",
-    "vim.insertModeKeyBindingsNonRecursive": [
-    ],
+    "vim.insertModeKeyBindingsNonRecursive": [],
     "vim.normalModeKeyBindings": [
         {
-            "before": ["<Leader>", "c"],
-            "commands": ["editor.action.commentLine"]
+            "before": [
+                "<Leader>",
+                "c"
+            ],
+            "commands": [
+                "editor.action.commentLine"
+            ]
         },
         {
-            "before": ["<Leader>", "r"],
-            "commands": ["editor.action.rename"]
+            "before": [
+                "<Leader>",
+                "r"
+            ],
+            "commands": [
+                "editor.action.rename"
+            ]
         },
         {
-            "before": ["<Leader>", "j"],
-            "commands": ["workbench.action.navigateBack"]
+            "before": [
+                "<Leader>",
+                "j"
+            ],
+            "commands": [
+                "workbench.action.navigateBack"
+            ]
         },
         {
-            "before": ["<Leader>", "k"],
-            "commands": ["workbench.action.navigateForward"]
+            "before": [
+                "<Leader>",
+                "k"
+            ],
+            "commands": [
+                "workbench.action.navigateForward"
+            ]
         },
         {
-            "before": ["<Leader>", "l"],
-            "commands": ["workbench.action.navigateEditorGroups"]
+            "before": [
+                "<Leader>",
+                "l"
+            ],
+            "commands": [
+                "workbench.action.navigateEditorGroups"
+            ]
         },
         {
-            "before": ["<Leader>", "f"],
-            "commands": ["editor.foldRecursively"]
+            "before": [
+                "<Leader>",
+                "f"
+            ],
+            "commands": [
+                "editor.foldRecursively"
+            ]
         },
         {
-            "before": ["<Leader>", "f", "f"],
-            "commands": ["editor.foldAll"]
+            "before": [
+                "<Leader>",
+                "f",
+                "f"
+            ],
+            "commands": [
+                "editor.foldAll"
+            ]
         },
         {
-            "before": ["<Leader>", "o"],
-            "commands": ["editor.unfoldRecursively"]
+            "before": [
+                "<Leader>",
+                "o"
+            ],
+            "commands": [
+                "editor.unfoldRecursively"
+            ]
         },
         {
-            "before": ["<C-u>"],
-            "after": ["1", "0", "k"]
+            "before": [
+                "<C-u>"
+            ],
+            "after": [
+                "1",
+                "0",
+                "k"
+            ]
         },
         {
-            "before": ["<C-d>"],
-            "after": ["1", "0", "j"]
+            "before": [
+                "<C-d>"
+            ],
+            "after": [
+                "1",
+                "0",
+                "j"
+            ]
         },
         {
-            "before": ["<Leader>", "w"],
-            "commands": ["editor.action.marker.next"],
+            "before": [
+                "<Leader>",
+                "w"
+            ],
+            "commands": [
+                "editor.action.marker.next"
+            ],
         },
     ],
     "vim.visualModeKeyBindings": [
         {
-            "before": ["<Leader>", "c"],
-            "commands": ["editor.action.commentLine"]
+            "before": [
+                "<Leader>",
+                "c"
+            ],
+            "commands": [
+                "editor.action.commentLine"
+            ]
         },
     ],
     "explorer.confirmDragAndDrop": false,
     "cSpell.userWords": [
         "Naviswiss"
     ],
-    "workbench.colorTheme": "Material theme oceanic custom",
+    "workbench.colorTheme": "Vira Teal High Contrast",
     "git.confirmSync": false,
     "git.suggestSmartCommit": false,
     "explorer.confirmPasteNative": false,
     "files.associations": {
         "*.FCMacro": "python"
+    },
+    "workbench.colorCustomizations": {
+        "[Vira*]": {
+            "toolbar.activeBackground": "#80CBC426",
+            "activityBarBadge.background": "#80CBC4",
+            "activityBar.activeBorder": "#80CBC4",
+            "activityBarTop.activeBorder": "#80CBC4",
+            "list.inactiveSelectionIconForeground": "#80CBC4",
+            "list.activeSelectionForeground": "#80CBC4",
+            "list.inactiveSelectionForeground": "#80CBC4",
+            "list.highlightForeground": "#80CBC4",
+            "sash.hoverBorder": "#80CBC480",
+            "list.activeSelectionIconForeground": "#80CBC4",
+            "scrollbarSlider.activeBackground": "#80CBC480",
+            "editorSuggestWidget.highlightForeground": "#80CBC4",
+            "textLink.foreground": "#80CBC4",
+            "progressBar.background": "#80CBC4",
+            "pickerGroup.foreground": "#80CBC4",
+            "tab.activeBorder": "#80CBC4",
+            "notificationLink.foreground": "#80CBC4",
+            "editorWidget.resizeBorder": "#80CBC4",
+            "editorWidget.border": "#80CBC4",
+            "settings.modifiedItemIndicator": "#80CBC4",
+            "settings.headerForeground": "#80CBC4",
+            "panelTitle.activeBorder": "#80CBC4",
+            "breadcrumb.activeSelectionForeground": "#80CBC4",
+            "menu.selectionForeground": "#80CBC4",
+            "menubar.selectionForeground": "#80CBC4",
+            "editor.findMatchBorder": "#80CBC4",
+            "selection.background": "#80CBC440",
+            "statusBarItem.remoteBackground": "#80CBC4",
+            "notebook.inactiveFocusedCellBorder": "#80CBC480",
+            "commandCenter.activeBorder": "#80CBC480"
+        }
     },
 }
