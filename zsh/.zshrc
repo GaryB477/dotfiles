@@ -41,27 +41,18 @@ fi
 bindkey '^ ' autosuggest-accept
 setxkbmap -option caps:escape
 
-# Setup of xserver for qt in docker
-xhost + local: >> /dev/null
-
-# Change key repetiton speed
-xset r rate 300 50
-
 ENABLE_CORRECTION="true"
 
 # Enable new docker buildkit
 export DOCKER_BUILDKIT=1
 
-# Aliases
-#alias "sudo"="sudo "
 #fix ssh issues with kitty
 [ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
 
+# Aliases
 alias rm="echo Use 'del', or the full path i.e. '/bin/rm' && cat ~/.monkey"
 alias t="tree -L 2"
 alias "cp"="rsync -ah --progress"
 alias "apt"="nala"
 alias "apt-get"="nala"
 alias "vim"="nvim"
-
-export PATH="/home/marc/.cargo/bin:$PATH"
