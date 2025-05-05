@@ -5,6 +5,7 @@ set incsearch                     " show search results while typing
 set wrapscan                      " searches wrap around the end of the file
 set clipboard+=unnamed            " use system clipboard
 set clipboard+=ideaput
+set commentary
 
 """ ---- General settings ----
 " Show a few lines of context around the cursor. Note that this makes the
@@ -29,7 +30,7 @@ map <leader>k :action Forward<CR>
 
 map <leader>d <Action>(Debug)
 map <leader>r <Action>(RenameElement)
-map <leader>c <Action>(Stop)
+nmap <leader>c :action CommentByLineComment<CR>
 map <leader>z <Action>(ToggleDistractionFreeMode)
 
 """ --- Tab / split movement

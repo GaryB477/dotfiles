@@ -55,12 +55,10 @@
         "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
         "sml": "cd $dir && sml $fileName"
     },
-    "[python]": {
-        "editor.formatOnType": true
-    },
     "security.workspace.trust.untrustedFiles": "open",
     "git.openRepositoryInParentFolders": "never",
     "python.defaultInterpreterPath": "/bin/python3",
+    "python.analysis.typeCheckingMode": "strict",
     "workbench.iconTheme": "catppuccin-frappe",
     "update.showReleaseNotes": false,
     "keyboard.dispatch": "keyCode",
@@ -194,45 +192,35 @@
     "cSpell.userWords": [
         "Naviswiss"
     ],
-    "workbench.colorTheme": "Vira Teal High Contrast",
     "git.confirmSync": false,
     "git.suggestSmartCommit": false,
     "explorer.confirmPasteNative": false,
     "files.associations": {
         "*.FCMacro": "python"
     },
-    "workbench.colorCustomizations": {
-        "[Vira*]": {
-            "toolbar.activeBackground": "#80CBC426",
-            "activityBarBadge.background": "#80CBC4",
-            "activityBar.activeBorder": "#80CBC4",
-            "activityBarTop.activeBorder": "#80CBC4",
-            "list.inactiveSelectionIconForeground": "#80CBC4",
-            "list.activeSelectionForeground": "#80CBC4",
-            "list.inactiveSelectionForeground": "#80CBC4",
-            "list.highlightForeground": "#80CBC4",
-            "sash.hoverBorder": "#80CBC480",
-            "list.activeSelectionIconForeground": "#80CBC4",
-            "scrollbarSlider.activeBackground": "#80CBC480",
-            "editorSuggestWidget.highlightForeground": "#80CBC4",
-            "textLink.foreground": "#80CBC4",
-            "progressBar.background": "#80CBC4",
-            "pickerGroup.foreground": "#80CBC4",
-            "tab.activeBorder": "#80CBC4",
-            "notificationLink.foreground": "#80CBC4",
-            "editorWidget.resizeBorder": "#80CBC4",
-            "editorWidget.border": "#80CBC4",
-            "settings.modifiedItemIndicator": "#80CBC4",
-            "settings.headerForeground": "#80CBC4",
-            "panelTitle.activeBorder": "#80CBC4",
-            "breadcrumb.activeSelectionForeground": "#80CBC4",
-            "menu.selectionForeground": "#80CBC4",
-            "menubar.selectionForeground": "#80CBC4",
-            "editor.findMatchBorder": "#80CBC4",
-            "selection.background": "#80CBC440",
-            "statusBarItem.remoteBackground": "#80CBC4",
-            "notebook.inactiveFocusedCellBorder": "#80CBC480",
-            "commandCenter.activeBorder": "#80CBC480"
-        }
+    "[nix]": {
+        "editor.defaultFormatter": "jnoortheen.nix-ide"
     },
+    "[python]": {
+        "editor.formatOnType": true,
+        // "editor.defaultFormatter": "ms-python.black-formatter"
+        "editor.defaultFormatter": "eeyore.yapf"
+    },
+    // "yapf.args": ["--style", ".style.yapf"],
+    "editor.minimap.enabled": false,
+    "git.blame.statusBarItem.enabled": false,
+    "workbench.colorTheme": "One Monokai",
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "terminal.integrated.scrollback": 10000,
 }
