@@ -42,6 +42,7 @@ fi
 # Various keybinds
 bindkey '^ ' autosuggest-accept
 setxkbmap -option caps:escape
+xset r rate 300 50
 
 ENABLE_CORRECTION="true"
 

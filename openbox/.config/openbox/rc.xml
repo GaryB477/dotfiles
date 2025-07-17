@@ -33,7 +33,7 @@
     <name>Arc-Darker</name>
     <titleLayout>NLIMC</titleLayout>
     <keepBorder>yes</keepBorder>
-    <animateIconify>yes</animateIconify>
+    <!-- <animateIconify>yes</animateIconify> -->
     <font place="ActiveWindow">
       <name>sans</name>
       <size>8</size>
@@ -149,6 +149,10 @@
     </keybind>
 
     <keybind key="A-Tab">
+      <action name="NextWindow" />
+    </keybind>
+
+    <keybind key="A-S-Tab">
       <action name="PreviousWindow" />
     </keybind>
 
@@ -161,15 +165,15 @@
     </keybind>
     <keybind key="W-space">
       <action name="Execute">
-        <name>dmenu</name>
-        <command>dmenu_run</command>
+        <name>ulauncher</name>
+        <command>ulauncher</command>
       </action>
     </keybind>
     <!-- ### -->
 
     <keybind key="W-l">
       <action name="Execute">
-        <command>bash -c "jumpapp -m alacritty"</command>
+        <command>bash -c "jumpapp -t alacritty -m -f alacritty -t alacritty"</command>
       </action>
     </keybind>
     <keybind key="W-d">
@@ -187,9 +191,29 @@
         <command>bash -c "jumpapp -m spotify || spotify"</command>
       </action>
     </keybind>
-    <keybind key="W-k">
+    <keybind key="W-S-k">
       <action name="Execute">
         <command>bash -c "jumpapp -m gitkraken"</command>
+      </action>
+    </keybind>
+    <keybind key="W-k">
+      <action name="Execute">
+        <command>bash -c "jumpapp -t lazygit -m -f alacritty -t lazygit -e lazygit"</command>
+      </action>
+    </keybind>
+    <keybind key="W-m">
+      <action name="Execute">
+        <command>bash -c "jumpapp -m teams || teams-for-linux"</command>
+      </action>
+    </keybind>
+    <keybind key="W-n">
+      <action name="Execute">
+        <command>bash -c "jumpapp -m obsidian"</command>
+      </action>
+    </keybind>
+    <keybind key="W-S-l">
+      <action name="Execute">
+        <command>bash -c "xsecurelock"</command>
       </action>
     </keybind>
 
@@ -581,12 +605,9 @@
     <!-- show the manage desktops section in the client-list-(combined-)menu -->
   </menu>
   <applications>
-    <application type="normal">
-      <decor>yes</decor>
-      <position>
-        <x>center</x>
-        <y>center</y>
-      </position>
+    <!-- match all windows, and remove their decorations -->
+    <application class="*">
+      <decor>no</decor>
     </application>
   </applications>
 </openbox_config>

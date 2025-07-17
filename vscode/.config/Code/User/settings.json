@@ -59,13 +59,16 @@
     "git.openRepositoryInParentFolders": "never",
     "python.defaultInterpreterPath": "/bin/python3",
     "python.analysis.typeCheckingMode": "strict",
-    "workbench.iconTheme": "catppuccin-frappe",
+    "workbench.iconTheme": "material-icon-theme",
     "update.showReleaseNotes": false,
     "keyboard.dispatch": "keyCode",
     "extensions.ignoreRecommendations": true,
     "explorer.confirmDelete": false,
-    "editor.smoothScrolling": true,
+    "editor.smoothScrolling": false,
     "editor.cursorSurroundingLines": 15,
+    "editor.fontWeight": "500",
+    "editor.mouseWheelScrollSensitivity": 3,
+    "editor.fastScrollSensitivity": 8,
     "vim.easymotion": true,
     "vim.incsearch": true,
     "vim.useSystemClipboard": true,
@@ -203,13 +206,11 @@
     },
     "[python]": {
         "editor.formatOnType": true,
-        // "editor.defaultFormatter": "ms-python.black-formatter"
         "editor.defaultFormatter": "eeyore.yapf"
     },
-    // "yapf.args": ["--style", ".style.yapf"],
+    "yapf.args": ["--style", ".style.yapf"],
     "editor.minimap.enabled": false,
-    "git.blame.statusBarItem.enabled": false,
-    "workbench.colorTheme": "One Monokai",
+    "workbench.colorTheme": "GitHub Dark Default",
     "[typescript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
@@ -223,4 +224,8 @@
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "terminal.integrated.scrollback": 10000,
+    "files.autoSave": "afterDelay",
+    "git.blame.editorDecoration.enabled": true,
+    "git.blame.statusBarItem.enabled": true,
+    "window.confirmSaveUntitledWorkspace": false,
 }
