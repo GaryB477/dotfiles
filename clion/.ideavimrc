@@ -28,10 +28,13 @@ map <leader>i :action GotoImplementation<CR>
 map <leader>j :action Back<CR>
 map <leader>k :action Forward<CR>
 
+map <leader>a <Action>(ReformatCode)
 map <leader>d <Action>(Debug)
 map <leader>r <Action>(RenameElement)
 nmap <leader>c :action CommentByLineComment<CR>
 map <leader>z <Action>(ToggleDistractionFreeMode)
+
+nmap <leader>lg <Action>(Generate)
 
 """ --- Tab / split movement
 map <leader>v <Action>(MoveTabRight)

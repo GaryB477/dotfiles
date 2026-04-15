@@ -228,4 +228,9 @@
     "git.blame.editorDecoration.enabled": true,
     "git.blame.statusBarItem.enabled": true,
     "window.confirmSaveUntitledWorkspace": false,
+    "claudeCode.preferredLocation": "panel",
+    "extensions.autoUpdate": false,
+    "extensions.autoCheckUpdates": false,
+    "update.mode": "none",
+    "settingsSync.keybindingsPerPlatform": false,
 }
