@@ -5,27 +5,48 @@ hs.hotkey.bind({"cmd", "alt", "ctrl"}, "W", function()
 end)
 
 
-hs.hotkey.bind({"alt"}, "D", function()
-   hs.application.launchOrFocus("Visual Studio Code")
-end)
-hs.hotkey.bind({"alt"}, "F", function()
-   hs.application.launchOrFocus("Google Chrome")
-end)
-hs.hotkey.bind({"alt"}, "L", function()
-   hs.application.launchOrFocus("Ghostty")
-end)
-hs.hotkey.bind({"alt"}, "M", function()
-   hs.application.launchOrFocus("Microsoft Teams")
-end)
-  hs.hotkey.bind({"alt"}, "N", function()
-   hs.application.launchOrFocus("Obsidian")
-end)
-hs.hotkey.bind({"alt"}, "J", function()
-   hs.application.launchOrFocus("Rider")
-end)
-hs.hotkey.bind({"alt"}, "K", function()
-   hs.application.launchOrFocus("Gitkraken")
-end)
+-- Launches/focuses an app. If the app is already frontmost, cycles through
+-- all its windows instead (works across multiple screens/spaces).
+local function launchOrCycle(appName)
+    return function()
+        local front = hs.application.frontmostApplication()
+        if front and front:name() == appName then
+            -- App already active: rotate to the next window.
+            local windows = front:visibleWindows()
+            -- Keep only standard windows and sort them for a stable order.
+            local standard = {}
+            for _, w in ipairs(windows) do
+                if w:isStandard() then
+                    table.insert(standard, w)
+                end
+            end
+            table.sort(standard, function(a, b) return a:id() < b:id() end)
+
+            if #standard > 1 then
+                local focused = hs.window.focusedWindow()
+                local idx = 1
+                for i, w in ipairs(standard) do
+                    if focused and w:id() == focused:id() then
+                        idx = i
+                        break
+                    end
+                end
+                local nextWin = standard[(idx % #standard) + 1]
+                nextWin:focus()
+                return
+            end
+        end
+        hs.application.launchOrFocus(appName)
+    end
+end
+
+hs.hotkey.bind({"alt"}, "D", launchOrCycle("Visual Studio Code"))
+hs.hotkey.bind({"alt"}, "F", launchOrCycle("Google Chrome"))
+hs.hotkey.bind({"alt"}, "L", launchOrCycle("Ghostty"))
+hs.hotkey.bind({"alt"}, "M", launchOrCycle("Microsoft Teams"))
+hs.hotkey.bind({"alt"}, "N", launchOrCycle("Obsidian"))
+hs.hotkey.bind({"alt"}, "J", launchOrCycle("Rider"))
+hs.hotkey.bind({"alt"}, "K", launchOrCycle("Gitkraken"))
 hs.hotkey.bind({"alt"}, "H", function()
     local app = hs.application.frontmostApplication()
     if app then

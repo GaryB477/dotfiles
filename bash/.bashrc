@@ -142,3 +142,8 @@ xhost +
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 export STM32_PRG_PATH=/home/marc/STMicroelectronics/STM32Cube/STM32CubeProgrammer/bin
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/marc/.lmstudio/bin"
+# End of LM Studio CLI section
+

@@ -1,5 +1,9 @@
 
 *.*~
+opencode/.config/opencode/node_modules/
+opencode/.config/opencode/package.json
+opencode/.config/opencode/package-lock.json
+opencode/.config/opencode/.gitignore
 vscode/.config/Code/Cache/
 
 vscode/.config/Code/CachedConfigurations/

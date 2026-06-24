@@ -33,15 +33,67 @@
         "command": "editor.action.formatDocument"
     },
     {
-        "key": "ctrl+h",
-        "command": "-editor.action.startFindReplaceAction"
+        "key": "cmd+h",
+        "command": "-workbench.action.hide"
     },
     {
-        "key": "ctrl+h",
+        "key": "cmd+h",
         "command": "workbench.action.navigateLeft"
     },
     {
-        "key": "ctrl+l",
+        "key": "cmd+j",
+        "command": "workbench.action.navigateDown"
+    },
+    {
+        "key": "cmd+k",
+        "command": "workbench.action.navigateUp"
+    },
+    {
+        "key": "cmd+l",
         "command": "workbench.action.navigateRight"
+    },
+    {
+        "key": "cmd+h",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                "claude-vscode.blur",
+                "workbench.action.navigateLeft"
+            ]
+        },
+        "when": "focusedView == 'claudeVSCodeSidebar' || focusedView == 'claudeVSCodeSidebarSecondary' || activeWebviewPanelId == 'claudeVSCodePanel'"
+    },
+    {
+        "key": "cmd+j",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                "claude-vscode.blur",
+                "workbench.action.navigateDown"
+            ]
+        },
+        "when": "focusedView == 'claudeVSCodeSidebar' || focusedView == 'claudeVSCodeSidebarSecondary' || activeWebviewPanelId == 'claudeVSCodePanel'"
+    },
+    {
+        "key": "cmd+k",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                "claude-vscode.blur",
+                "workbench.action.navigateUp"
+            ]
+        },
+        "when": "focusedView == 'claudeVSCodeSidebar' || focusedView == 'claudeVSCodeSidebarSecondary' || activeWebviewPanelId == 'claudeVSCodePanel'"
+    },
+    {
+        "key": "cmd+l",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                "claude-vscode.blur",
+                "workbench.action.navigateRight"
+            ]
+        },
+        "when": "focusedView == 'claudeVSCodeSidebar' || focusedView == 'claudeVSCodeSidebarSecondary' || activeWebviewPanelId == 'claudeVSCodePanel'"
     }
 ]
