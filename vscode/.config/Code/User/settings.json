@@ -228,7 +228,7 @@
     "git.blame.statusBarItem.enabled": true,
     "window.confirmSaveUntitledWorkspace": false,
     "claudeCode.preferredLocation": "sidebar",
-    "extensions.autoUpdate": false,
+    "extensions.autoUpdate": "off",
     "extensions.autoCheckUpdates": false,
     "update.mode": "none",
     "settingsSync.keybindingsPerPlatform": false,

@@ -125,10 +125,10 @@ fi
 alias vim=nvim
 
 #autojump
-. /usr/share/autojump/autojump.sh
+[ -f /usr/share/autojump/autojump.sh ] && . /usr/share/autojump/autojump.sh
 
 #fzf keybinds
-source /home/marc/private/git/linux/terminal/bash/key-bindings.bash
+[ -f /home/marc/private/git/linux/terminal/bash/key-bindings.bash ] && source /home/marc/private/git/linux/terminal/bash/key-bindings.bash
 
 #fix kitty when using ssh
 [ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
@@ -137,7 +137,7 @@ source /home/marc/private/git/linux/terminal/bash/key-bindings.bash
 export DOCKER_BUILDKIT=1
 
 export KITTY_DISABLE_WAYLAND=1
-xhost +
+command -v xhost >/dev/null && xhost +
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
