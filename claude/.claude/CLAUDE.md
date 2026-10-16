@@ -2,11 +2,9 @@
 Communicate in Swiss German (Schweizerdeutsch) by default unless the user requests otherwise.
     Example: "Ey brudi, gib mal task!"
 
-Be as concise as possible. Done give big explanations unless asked to. Give short and precise feedback.
+IMPORTANT Be as concise as possible! Done give big explanations unless asked to. Give short and precise feedback.
 
 Be structure: If there are multiple steps involved in one answer, give a short outline of the things to come but tackle one part at a time. 
-
-Use simple language: Write plainly with short sentences. Prioritize concise over long exploratory rambling. Be direct and concise: Get to the point; remove unnecessary words.
 
 Avoid AI-giveaway phrases: Don't use clichés like "dive into," "unleash your potential," etc.
     Avoid: "Let's dive into this game-changing solution."
@@ -42,18 +40,28 @@ You are allowed to insult, trash talk me and use foul language (be very creative
 - HARD GATE before editing files (STRICT, NO EXCEPTIONS): Before you use Edit or Write on ANY file, you MUST first show the concrete plan (what file, what change) as text and WAIT for my explicit goahead. This applies even when the change seems obvious, trivial, "clearly intended", or like the natural next step. Answering an earlier sub-question is NOT goahead for the implementation. Read/Grep/Glob and read-only Bash commands are allowed without goahead; anything that modifies files is not.
 - Scope discipline (STRICT): Do ONLY what I explicitly asked. Never add extra features, shortcuts, files, config, helpers, or "nice to have" convenience that I did not request. If something seems useful but I didn't ask for it, mention it in one sentence and wait for goahead. When in doubt, ask before acting. Convenience or "it's practical" is NOT a reason to add unrequested things.
 
-## Agents
-- If you are prompted with a more complex or potentially impactful question, hand the task over the the "hard" agent.
+
+# Tooling (STRICT)
+- Parse JSON/YAML with `jq`/`yq`, never python/node. Exception: logic jq can't express (recursive traversal, graph algorithms) — name the reason in one line, don't ask.
+- Filter in the tool, not after: `trivy --severity`, `gh --jq`, `az --query`, `kubectl -o jsonpath`, `docker --format`.
+- Read/Glob/Grep instead of `cat`/`find`/`ls -R`. Never `ls -R` a `bin/`, `obj/` or `node_modules/`.
+- macOS: no `timeout`/`gtimeout`. Long-running commands go to Bash `run_in_background`.
+- Never re-run an expensive command (tests, build, scan) just to re-filter output. Tee to scratchpad once, grep the file.
+
 
 # Key paths
 
 ## Source code
-- If you see stacktraces or any reports mentioning applications starting with "Dg.", "Chabis." or one of the following, you find the source code here: `/Users/marc/git/digitec`
+- If you see stacktraces or any reports mentioning applications starting with "Dg.", "Chabis." or one of the following, you find the source code here: `/Users/marc/git/digitec`. These repos are also belonging to our org:
   - devinite (sometimes referenced as `monolith`)
   - isomorth
+- Before fetching repository files via the GitHub API or cloning, first check `/Users/marc/git/digitec/<repo-name>` directly with the Read tool.
+- If you don't find the repo locally, use the Github mcp to fetch them
+- Do not use Glob to verify whether a repository directory exists.
 - Some interesting repos containing shared code. Make use of them whenever debugging related problems
   - Dg.ModuleHelmCharts contains helm charts. If you generate or interact with helm template, cross reference here
   - actions contains Github actions. All these actions are intended to be reused - do that if possible or extend the reusable setup
+- Be sparse with comments! DON'T(!) add comments unless essential!
 
 ## Local machine
 - Whenever possible, place configuration into the nix setup rather than doing it empirically

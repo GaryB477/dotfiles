@@ -73,7 +73,7 @@
     "vim.incsearch": true,
     "vim.useSystemClipboard": true,
     "vim.useCtrlKeys": false,
-    "vim.foldfix": true,
+    "vim.foldfix": false,
     "vim.leader": "<Space>",
     "vim.insertModeKeyBindingsNonRecursive": [],
     "vim.normalModeKeyBindings": [
@@ -210,6 +210,7 @@
     },
     "yapf.args": ["--style", ".style.yapf"],
     "editor.minimap.enabled": false,
+    "editor.stickyScroll.enabled": false,
     "workbench.colorTheme": "GitHub Dark Default",
     "[typescript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -234,4 +235,5 @@
     "settingsSync.keybindingsPerPlatform": false,
     "docker.extension.enableComposeLanguageServer": false,
     "editor.lineNumbers": "relative",
+    "claudeCode.hideOnboarding": true,
 }

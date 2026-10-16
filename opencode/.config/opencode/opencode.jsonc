@@ -1,8 +1,20 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "enabled_providers": ["github-copilot"],
-  "model": "github-copilot/claude-sonnet-4.6",
+  "enabled_providers": ["github-copilot", "lmstudio"],
+  "model": "github-copilot/GPT-5.6-sol",
+  "provider": {
+    "lmstudio": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "LM Studio (local)",
+      "options": { "baseURL": "http://127.0.0.1:1234/v1" },
+      "models": {
+        "qwen3-coder-next-mlx": { "name": "Qwen3-Coder-Next 4bit (local)" }
+      }
+    }
+  },
   "permission": {
+    "webfetch": "allow",
+    "websearch": "allow",
     "external_directory": {
       "/Users/marc/git/digitec/**": "allow",
       "/Users/marc/git/private/**": "allow",
@@ -63,6 +75,7 @@
       "realpath*": "allow",
       "readlink*": "allow",
       "grep*": "allow",
+      "rg*": "allow",
       "cut*": "allow",
       "uniq*": "allow",
       "diff*": "allow",
@@ -72,6 +85,8 @@
       "cp*": "allow",
       "mv*": "allow",
       "ln*": "allow",
+      "rg*": "allow",
+      "sort*": "allow",
 
       // ========================= 2) DANGEROUS =========================
       // Only the safe subcommands below run automatically.

@@ -1,0 +1,237 @@
+// Check this here for the VIM settings --> https://github.com/VSCodeVim/Vim
+{
+    "workbench.startupEditor": "none",
+    "git.autofetch": true,
+    "code-runner.executorMap": {
+        "javascript": "node",
+        "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+        "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "php": "php",
+        "python": "python3 -u",
+        "perl": "perl",
+        "perl6": "perl6",
+        "ruby": "ruby",
+        "go": "go run",
+        "lua": "lua",
+        "groovy": "groovy",
+        "powershell": "powershell -ExecutionPolicy ByPass -File",
+        "bat": "cmd /c",
+        "shellscript": "bash",
+        "fsharp": "fsi",
+        "csharp": "scriptcs",
+        "vbscript": "cscript //Nologo",
+        "typescript": "ts-node",
+        "coffeescript": "coffee",
+        "scala": "scala",
+        "swift": "swift",
+        "julia": "julia",
+        "crystal": "crystal",
+        "ocaml": "ocaml",
+        "r": "Rscript",
+        "applescript": "osascript",
+        "clojure": "lein exec",
+        "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+        "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+        "racket": "racket",
+        "scheme": "csi -script",
+        "ahk": "autohotkey",
+        "autoit": "autoit3",
+        "dart": "dart",
+        "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+        "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+        "haskell": "runhaskell",
+        "nim": "nim compile --verbosity:0 --hints:off --run",
+        "lisp": "sbcl --script",
+        "kit": "kitc --run",
+        "v": "v run",
+        "sass": "sass --style expanded",
+        "scss": "scss --style expanded",
+        "less": "cd $dir && lessc $fileName $fileNameWithoutExt.css",
+        "FortranFreeForm": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "fortran-modern": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "fortran_fixed-form": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "sml": "cd $dir && sml $fileName"
+    },
+    "security.workspace.trust.untrustedFiles": "open",
+    "git.openRepositoryInParentFolders": "never",
+    "python.defaultInterpreterPath": "/bin/python3",
+    "python.analysis.typeCheckingMode": "strict",
+    "workbench.iconTheme": "material-icon-theme",
+    "update.showReleaseNotes": false,
+    "keyboard.dispatch": "keyCode",
+    "extensions.ignoreRecommendations": true,
+    "explorer.confirmDelete": false,
+    "editor.smoothScrolling": false,
+    "editor.cursorSurroundingLines": 15,
+    "editor.fontWeight": "500",
+    "editor.mouseWheelScrollSensitivity": 3,
+    "editor.fastScrollSensitivity": 8,
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": false,
+    "vim.foldfix": true,
+    "vim.leader": "<Space>",
+    "vim.insertModeKeyBindingsNonRecursive": [],
+    "vim.normalModeKeyBindings": [
+        {
+            "before": [
+                "<Leader>",
+                "c"
+            ],
+            "commands": [
+                "editor.action.commentLine"
+            ]
+        },
+        {
+            "before": [
+                "<Leader>",
+                "r"
+            ],
+            "commands": [
+                "editor.action.rename"
+            ]
+        },
+        {
+            "before": [
+                "<Leader>",
+                "j"
+            ],
+            "commands": [
+                "workbench.action.navigateBack"
+            ]
+        },
+        {
+            "before": [
+                "<Leader>",
+                "k"
+            ],
+            "commands": [
+                "workbench.action.navigateForward"
+            ]
+        },
+        {
+            "before": [
+                "<Leader>",
+                "l"
+            ],
+            "commands": [
+                "workbench.action.navigateEditorGroups"
+            ]
+        },
+        {
+            "before": [
+                "<Leader>",
+                "f"
+            ],
+            "commands": [
+                "editor.foldRecursively"
+            ]
+        },
+        {
+            "before": [
+                "<Leader>",
+                "f",
+                "f"
+            ],
+            "commands": [
+                "editor.foldAll"
+            ]
+        },
+        {
+            "before": [
+                "<Leader>",
+                "o"
+            ],
+            "commands": [
+                "editor.unfoldRecursively"
+            ]
+        },
+        {
+            "before": [
+                "<C-u>"
+            ],
+            "after": [
+                "1",
+                "0",
+                "k"
+            ]
+        },
+        {
+            "before": [
+                "<C-d>"
+            ],
+            "after": [
+                "1",
+                "0",
+                "j"
+            ]
+        },
+        {
+            "before": [
+                "<Leader>",
+                "w"
+            ],
+            "commands": [
+                "editor.action.marker.next"
+            ],
+        },
+    ],
+    "vim.visualModeKeyBindings": [
+        {
+            "before": [
+                "<Leader>",
+                "c"
+            ],
+            "commands": [
+                "editor.action.commentLine"
+            ]
+        },
+    ],
+    "explorer.confirmDragAndDrop": false,
+    "cSpell.userWords": [
+        "Naviswiss"
+    ],
+    "git.confirmSync": false,
+    "git.suggestSmartCommit": false,
+    "explorer.confirmPasteNative": false,
+    "files.associations": {
+        "*.FCMacro": "python"
+    },
+    "[nix]": {
+        "editor.defaultFormatter": "jnoortheen.nix-ide"
+    },
+    "[python]": {
+        "editor.formatOnType": true,
+        "editor.defaultFormatter": "eeyore.yapf"
+    },
+    "yapf.args": ["--style", ".style.yapf"],
+    "editor.minimap.enabled": false,
+    "workbench.colorTheme": "GitHub Dark Default",
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "terminal.integrated.scrollback": 10000,
+    "files.autoSave": "afterDelay",
+    "git.blame.statusBarItem.enabled": true,
+    "window.confirmSaveUntitledWorkspace": false,
+    "claudeCode.preferredLocation": "sidebar",
+    "extensions.autoUpdate": "off",
+    "extensions.autoCheckUpdates": false,
+    "update.mode": "none",
+    "settingsSync.keybindingsPerPlatform": false,
+    "docker.extension.enableComposeLanguageServer": false,
+    "editor.lineNumbers": "relative",
+}
