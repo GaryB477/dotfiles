@@ -76,6 +76,16 @@
     "vim.foldfix": false,
     "vim.leader": "<Space>",
     "vim.insertModeKeyBindingsNonRecursive": [],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        { "before": ["j"], "after": ["g", "j"] },
+        { "before": ["k"], "after": ["g", "k"] },
+        { "before": ["<Down>"], "after": ["g", "j"] },
+        { "before": ["<Up>"], "after": ["g", "k"] }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        { "before": ["j"], "after": ["g", "j"] },
+        { "before": ["k"], "after": ["g", "k"] }
+    ],
     "vim.normalModeKeyBindings": [
         {
             "before": [
@@ -200,6 +210,9 @@
     "explorer.confirmPasteNative": false,
     "files.associations": {
         "*.FCMacro": "python"
+    },
+    "[markdown]": {
+        "editor.wordWrap": "on"
     },
     "[nix]": {
         "editor.defaultFormatter": "jnoortheen.nix-ide"
